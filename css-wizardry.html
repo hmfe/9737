@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>CSS Wizardry</title>
+
+  <style>
+    /* Button with circle and cross mark */
+    button {
+      font-weight: 800;
+      border-radius: 0;
+      border: 2px solid #878787;
+      padding: 5px 14px;
+      height: 140px;
+      width: 266px;
+      background: linear-gradient(0.25turn, #f0ae5e, #f09639);
+      position: relative;
+      font-size: 34px;
+      text-align: left;
+    }
+
+    /* Circle inside the button */
+    button:before {
+      content: " ";
+      background: #fff;
+      width: 114px;
+      height: 114px;
+      position: absolute;
+      border-radius: 50%;
+      right: 10px;
+      top: 50%;
+      margin-top: -57px;
+      font-weight: 300;
+    }
+
+    /* Cross mark positioned inside the circle */
+    button:after {
+      content: "\d7";
+      font-size: 70px;
+      position: absolute;
+      right: 47px;
+      top: 50%;
+      height: 38px;
+      line-height: 28px;
+      margin-top: -19px;
+      font-family: times;
+      font-weight: normal;
+    }
+  </style>
+</head>
+<body>
+
+  <button>
+    Delete
+  </button>
+
+</body>
+</html>
