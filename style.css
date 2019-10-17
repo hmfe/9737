@@ -1,0 +1,316 @@
+html {
+  font-size: 10px;
+}
+
+body {
+  font-family: Helvetica, Arial, sans-serif;
+}
+
+ul,
+ol,
+body {
+  margin: 0;
+  padding: 0;
+}
+
+.main {
+  max-width: 540px;
+  margin: 0 auto;
+  padding: 0 10px;
+}
+
+.search-history {
+  background: #eee;
+}
+
+.search-history__header {
+  padding: 7px;
+  display: flex;
+  justify-content: space-between;
+  border-bottom: 1px solid #ddd;
+}
+
+.search-history__header__title {
+  font-weight: bold;
+  font-size: 1.4rem;
+}
+
+.search-history__header__clear {
+  background: none;
+  border: 0;
+  padding: 0;
+  font-size: 1.2rem;
+  cursor: pointer;
+  color: inherit;
+  text-decoration: none;
+}
+
+.search-history__header__clear:hover {
+  text-decoration: underline;
+}
+
+.search-history__items {
+  list-style: none;
+}
+
+.search-history header,
+.search-history li {
+  border-bottom: 1px solid #ddd;  
+  padding: 7px;
+}
+
+.search-history li {
+  position: relative;
+}
+
+.search-history__header {
+  display: flex;
+  justify-content: space-between;
+}
+
+.search-history__item__text {
+  background: none;
+  border: 0;
+  padding: 0;
+  cursor: pointer;
+  color: inherit;
+  text-decoration: none;
+}
+
+.search-history__item__text:hover {
+  font-weight: bold;
+}
+
+.search-history__item__timestamp {
+  float: right;
+  margin-right: 30px;
+  color: #666;
+}
+
+
+.search-box {
+  border: 1px solid #ddd;
+  position: relative;
+}
+
+.search-box__field {
+  border: 0;
+  display: block;
+  height: 30px;
+  width: 100%;
+  padding: 0 14px;
+}
+
+.search-box__autocomplete {
+  text-transform: capitalize;
+  list-style: none;
+  position: absolute;
+  z-index: 1;
+  background: #fff;
+  left: -1px;
+  right: -1px;
+  border: 1px solid #ddd;
+  max-height: 200px;
+  overflow-y: scroll;
+}
+
+.search-box__autocomplete li {
+  padding-top: 8px;
+  padding-bottom: 8px;
+  line-height: 1.74;
+  transition: background 0.15s;
+  cursor: pointer;
+}
+
+.search-box__autocomplete li:focus {
+  background: #eee;
+  outline: 0;
+}
+
+.search-box__autocomplete li:hover {
+  background: #f7f7f7;
+}
+
+.search-box__autocomplete-error {
+  padding-left: 10px;
+}
+
+
+.icon-remove {
+  position: absolute;
+  background: none;
+  border: 0;
+  top: 0;
+  bottom: 0;
+  right: 0;
+  width: 30px;
+  cursor: pointer;
+}
+
+.icon-remove:before,
+.icon-remove:after {
+  content: ' ';
+  position: absolute;
+  top: 50%;
+  right: 14px;
+  margin-top: -7px;
+  width: 1px;
+  height: 14px;
+  background: #545454;
+  transition: all .15s ease-in;
+}
+
+.icon-remove:before {
+  transform: rotate(45deg);
+}
+
+.icon-remove:after {
+  transform: rotate(-45deg);
+}
+
+.icon-remove:hover:after,
+.icon-remove:hover:before {
+  width: 2px;
+  background: #202020;
+}
+
+.icon-remove:hover:before {
+  transform: rotate(-45deg);
+}
+
+.icon-remove:hover:after {
+  width: 2px;
+  background: #202020;
+  transform: rotate(45deg);
+}
+
+
+.icon-sports {
+  padding-left: 45px;
+  position: relative;
+}
+
+.icon-sports:before {
+  position: absolute;
+  left: 10px;
+  height: 28px;
+  width: 28px;
+  content: ' ';
+  background-size: cover;
+  background-repeat: no-repeat;
+  top: 50%;
+  margin-top: -14px;
+}
+
+/* It really is football though */
+.icon-sports--soccer:before {
+  background-image: url('img/icons/soccer.svg');
+}
+
+.icon-sports--basketball:before {
+  background-image: url('img/icons/basketball.svg');
+}
+
+.icon-sports--ice-hockey:before {
+  background-image: url('img/icons/hockey.svg');
+}
+
+.icon-sports--baseball:before {
+  background-image: url('img/icons/baseball.svg');
+}
+
+.icon-sports--rugby:before {
+  background-image: url('img/icons/rugby.svg');
+}
+
+.icon-sports--american-football:before {
+  background-image: url('img/icons/american-football.svg');
+}
+
+.icon-sports--cricket:before {
+  background-image: url('img/icons/cricket.svg');
+}
+
+.icon-sports--motorsport:before {
+  background-image: url('img/icons/motorsport.svg');
+}
+
+.icon-sports--cycling:before {
+  background-image: url('img/icons/cycling.svg');
+}
+
+.icon-sports--esports:before {
+  background-image: url('img/icons/esports.svg');
+}
+
+.icon-sports--cycling:before {
+  background-image: url('img/icons/cycling.svg');
+}
+
+.icon-sports--boxing:before,
+.icon-sports--fighting:before {
+  background-image: url('img/icons/boxing.svg');
+}
+
+
+/** Search Results */
+.search-results {
+  margin-top: 24px;
+}
+
+.search-result__item {
+  border-bottom: 1px solid #ddd; 
+  border-top: 1px solid #ddd; 
+  padding: 10px 0;
+}
+
+.search-result__item__article {
+  display: flex; 
+  justify-content: space-between; 
+  align-items: center;
+}
+
+.search-result__item__article__title {
+  font-size: 2rem; 
+  margin-top: 0;
+}
+
+.search-result__item__article__info {
+  list-style: none; 
+  font-size: 1.3rem; 
+  line-height: 1.4;
+  font-weight: normal;
+}
+
+.search-result__item__article__image {
+  width: 150px; 
+  float: left;
+}
+.search-result__item__article__content {
+  list-style: none; 
+  font-size: 1.3rem; 
+  line-height: 1.4;
+}
+
+@media (max-width: 480px) {
+  .search-result__item__article__image {
+    display: none;
+  }
+}
+
+/** Utilities */
+.hidden {
+  display: none;
+}
+
+.text--lg {
+  font-size: 2.8rem;
+}
+.text--md {
+  font-size: 2.2rem;
+}
+
+.text--sm {
+  font-size: 1.6rem;
+  line-height: 1.4;
+}
